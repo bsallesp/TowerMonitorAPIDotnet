@@ -9,29 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef87e726-fc9b-4997-b9e1-6f8a08c45459" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/TowerStatusController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Interfaces/ITowerStatusSimulatorService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/TowerStatusSimulatorService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Repositories/Interfaces/ITowerLiveStatusRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Repositories/TowerLiveStatusRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Controllers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/TowerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TowerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/TowerStatusAggregationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TowerStatusAggregationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/TowerLiveStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/TowerLiveStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/TowerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/TowerStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Repositories/ITowerLiveStatusRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Cosmos/Repositories/TowerRepositoryCosmos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Cosmos/Repositories/TowerRepositoryCosmos.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/ITowerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/ITowerRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/TowerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/TowerRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" afterDir="false" />
@@ -135,7 +119,7 @@
       <updated>1754694226504</updated>
       <workItem from="1754694226506" duration="1922000" />
       <workItem from="1754696875292" duration="3769000" />
-      <workItem from="1754742454635" duration="10554000" />
+      <workItem from="1754742454635" duration="15917000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository.">
       <option name="closed" value="true" />
@@ -145,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754749843512</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor repository logic: unifying interfaces, introducing CosmosDB support, and updating domain entities.">
+      <option name="closed" value="true" />
+      <created>1754753459098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754753459098</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +148,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository." />
+    <MESSAGE value="Refactor repository logic: unifying interfaces, introducing CosmosDB support, and updating domain entities." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor repository logic: unifying interfaces, introducing CosmosDB support, and updating domain entities." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
