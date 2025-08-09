@@ -8,27 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef87e726-fc9b-4997-b9e1-6f8a08c45459" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ref/TowerApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/TowerApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-    </list>
+    <list default="true" id="ef87e726-fc9b-4997-b9e1-6f8a08c45459" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
@@ -119,7 +109,7 @@
       <updated>1754694226504</updated>
       <workItem from="1754694226506" duration="1922000" />
       <workItem from="1754696875292" duration="3769000" />
-      <workItem from="1754742454635" duration="15917000" />
+      <workItem from="1754742454635" duration="16547000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository.">
       <option name="closed" value="true" />
@@ -137,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754753459098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor `TowerStatusSimulatorHostedService` to simulate heartbeats and incidents, improve tower status updates, and optimize repository usage.">
+      <option name="closed" value="true" />
+      <created>1754759830248</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754759830248</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +147,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository." />
     <MESSAGE value="Refactor repository logic: unifying interfaces, introducing CosmosDB support, and updating domain entities." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor repository logic: unifying interfaces, introducing CosmosDB support, and updating domain entities." />
+    <MESSAGE value="Refactor `TowerStatusSimulatorHostedService` to simulate heartbeats and incidents, improve tower status updates, and optimize repository usage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor `TowerStatusSimulatorHostedService` to simulate heartbeats and incidents, improve tower status updates, and optimize repository usage." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
