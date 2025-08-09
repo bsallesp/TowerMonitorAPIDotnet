@@ -1,20 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TowerApi.Domain.Entities;
+using TowerApi.Infrastructure.Data.Configurations;
 
 namespace TowerApi.Infrastructure.Data;
 
-public class SQLServerDbContext : DbContext
+public class SqlServerDbContext(DbContextOptions<SqlServerDbContext> options) : DbContext(options)
 {
-    public SQLServerDbContext(DbContextOptions<SQLServerDbContext> options)
-        : base(options)
-    {
-    }
-
-    public DbSet<Tower> Towers => Set<Tower>();
+    public DbSet<Tower> Towers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(SQLServerDbContext).Assembly);
-        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfiguration(new TowerConfiguration());
     }
+
 }

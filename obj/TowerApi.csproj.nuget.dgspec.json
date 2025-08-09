@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[1.14.2, )"
             },
+            "Azure.Security.KeyVault.Secrets": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -68,15 +72,23 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.8, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

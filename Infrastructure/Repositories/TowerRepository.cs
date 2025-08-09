@@ -7,9 +7,9 @@ namespace TowerApi.Infrastructure.Repositories;
 
 public class TowerRepository : ITowerRepository
 {
-    private readonly SQLServerDbContext _context;
+    private readonly SqlServerDbContext _context;
 
-    public TowerRepository(SQLServerDbContext context)
+    public TowerRepository(SqlServerDbContext context)
     {
         _context = context;
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TowerApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e85d60aef76d15779bb20f32f296a5c504b763f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TowerApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TowerApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
