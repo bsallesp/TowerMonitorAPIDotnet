@@ -1,46 +1,43 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TowerApi.Domain.Entities;
-using TowerApi.Domain.Repositories;
 using TowerApi.Infrastructure.Data;
 
 namespace TowerApi.Infrastructure.Repositories;
 
-public class TowerRepository : ITowerRepository
+public class TowerRepository(SqlServerDbContext context) : ITowerRepository
 {
-    private readonly SqlServerDbContext _context;
-
-    public TowerRepository(SqlServerDbContext context)
+    public async Task<Tower?> GetByIdAsync(long id, CancellationToken cancellationToken = default)
     {
-        _context = context;
+        return await context.Towers.FindAsync([id], cancellationToken);
     }
 
-    public async Task<Tower?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<Tower>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        return await _context.Towers.FindAsync(new object[] { id }, cancellationToken);
+        return await context.Towers.AsNoTracking().ToListAsync(cancellationToken);
     }
 
-    public async Task<IEnumerable<Tower>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<long>> GetIdsAsync(CancellationToken cancellationToken = default)
     {
-        return await _context.Towers.AsNoTracking().ToListAsync(cancellationToken);
+        return await context.Towers.AsNoTracking().OrderBy(t => t.Id).Select(t => t.Id).ToListAsync(cancellationToken);
     }
 
     public async Task AddAsync(Tower tower, CancellationToken cancellationToken = default)
     {
-        await _context.Towers.AddAsync(tower, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
+        await context.Towers.AddAsync(tower, cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
     }
 
     public async Task UpdateAsync(Tower tower, CancellationToken cancellationToken = default)
     {
-        _context.Towers.Update(tower);
-        await _context.SaveChangesAsync(cancellationToken);
+        context.Towers.Update(tower);
+        await context.SaveChangesAsync(cancellationToken);
     }
 
-    public async Task DeleteAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task DeleteAsync(long id, CancellationToken cancellationToken = default)
     {
         var entity = await GetByIdAsync(id, cancellationToken);
         if (entity is null) return;
-        _context.Towers.Remove(entity);
-        await _context.SaveChangesAsync(cancellationToken);
+        context.Towers.Remove(entity);
+        await context.SaveChangesAsync(cancellationToken);
     }
 }

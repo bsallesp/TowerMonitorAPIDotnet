@@ -1,29 +1,23 @@
 ﻿using TowerApi.Domain.Entities;
 using TowerApi.Domain.Repositories;
+using TowerApi.Infrastructure.Repositories;
 
 namespace TowerApi.Application.Services;
 
-public class TowerService
+public class TowerService(ITowerRepository repository)
 {
-    private readonly ITowerRepository _repository;
-
-    public TowerService(ITowerRepository repository)
-    {
-        _repository = repository;
-    }
-
     public async Task<IEnumerable<Tower>> GetAllTowersAsync(CancellationToken ct = default)
-        => await _repository.GetAllAsync(ct);
+        => await repository.GetAllAsync(ct);
 
-    public async Task<Tower?> GetTowerByIdAsync(Guid id, CancellationToken ct = default)
-        => await _repository.GetByIdAsync(id, ct);
+    public async Task<Tower?> GetTowerByIdAsync(long id, CancellationToken ct = default)
+        => await repository.GetByIdAsync(id, ct);
 
     public async Task AddTowerAsync(Tower tower, CancellationToken ct = default)
-        => await _repository.AddAsync(tower, ct);
+        => await repository.AddAsync(tower, ct);
 
     public async Task UpdateTowerAsync(Tower tower, CancellationToken ct = default)
-        => await _repository.UpdateAsync(tower, ct);
+        => await repository.UpdateAsync(tower, ct);
 
-    public async Task DeleteTowerAsync(Guid id, CancellationToken ct = default)
-        => await _repository.DeleteAsync(id, ct);
+    public async Task DeleteTowerAsync(long id, CancellationToken ct = default)
+        => await repository.DeleteAsync(id, ct);
 }

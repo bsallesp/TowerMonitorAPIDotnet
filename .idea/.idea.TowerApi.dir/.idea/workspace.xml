@@ -9,55 +9,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef87e726-fc9b-4997-b9e1-6f8a08c45459" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Services/TowerStatusAggregationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entities/TowerLiveStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entities/TowerRaw.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Repositories/ITowerLiveStatusRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Cosmos/Repositories/TowerLiveStatusRepositoryCosmos.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Background/TowerStatusSimulatorHostedService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Controllers/TowerStatusController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Interfaces/ITowerStatusSimulatorService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TowerStatusSimulatorService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repositories/Interfaces/ITowerLiveStatusRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repositories/TowerLiveStatusRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerApi.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Controllers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Tower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Configurations/TowerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Configurations/TowerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/SQLServerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/SQLServerDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/TowerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TowerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/TowerStatusAggregationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/TowerStatusAggregationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/TowerLiveStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/TowerLiveStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/TowerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/TowerStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Repositories/ITowerLiveStatusRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Cosmos/Repositories/TowerRepositoryCosmos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Cosmos/Repositories/TowerRepositoryCosmos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/ITowerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/ITowerRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/TowerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/TowerRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TowerApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Azure.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Azure.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.ClientModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/System.ClientModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Memory.Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/System.Memory.Data.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/TowerApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/TowerApi.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ref/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/TowerApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/TowerApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/TowerApi.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +64,7 @@
     &quot;accountId&quot;: &quot;a2496480-519b-4e7a-926c-b248c18c2cf3&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -152,16 +135,28 @@
       <updated>1754694226504</updated>
       <workItem from="1754694226506" duration="1922000" />
       <workItem from="1754696875292" duration="3769000" />
-      <workItem from="1754742454635" duration="6968000" />
+      <workItem from="1754742454635" duration="10554000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository.">
+      <option name="closed" value="true" />
+      <created>1754749843511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754749843512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Tower and TowerController, upgrade dependencies, and add CosmosDB repository." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,4 +1,6 @@
-﻿using TowerApi.Domain.Repositories;
+﻿using TowerApi.Domain.Entities;
+using TowerApi.Domain.Repositories.Interfaces;
+using TowerApi.Infrastructure.Repositories;
 
 namespace TowerApi.Application.Services;
 
@@ -24,7 +26,7 @@ public class TowerStatusAggregationService(
                 t.City,
                 t.State,
                 t.StructureHeight,
-                Status = status?.Status ?? "Unknown",
+                Status = status?.Status.ToString() ?? nameof(TowerStatus.Unknown),
                 LastUpdate = status?.Timestamp
             };
 

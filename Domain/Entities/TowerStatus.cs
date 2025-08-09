@@ -2,8 +2,7 @@
 
 public enum TowerStatus
 {
-    Active,
-    Inactive,
-    Maintenance,
-    Decommissioned
+    Unknown,
+    Online,
+    Offline
 }
