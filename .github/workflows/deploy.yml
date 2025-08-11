@@ -1,0 +1,105 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  API_PROJECT: TowerApi/TowerApi.csproj
+  API_TEST_PROJECT: TowerApi.Tests/TowerApi.Tests.csproj
+  WORKER_PROJECT: TowerSimulator.Worker/TowerSimulator.Worker.csproj
+  WORKER_TEST_PROJECT: Worker.Tests/Worker.Tests.csproj
+  API_APP_NAME: tower-monitor-api-dotnet
+  WORKER_APP_NAME: tower-simulator-workerhost
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: |
+          dotnet restore $API_PROJECT
+          dotnet restore $WORKER_PROJECT
+          dotnet restore $API_TEST_PROJECT
+          dotnet restore $WORKER_TEST_PROJECT
+
+      - name: Build
+        run: |
+          dotnet build $API_PROJECT -c Release --no-restore
+          dotnet build $WORKER_PROJECT -c Release --no-restore
+
+      - name: Test
+        run: |
+          dotnet test $API_TEST_PROJECT -c Release --no-build --verbosity normal
+          dotnet test $WORKER_TEST_PROJECT -c Release --no-build --verbosity normal
+
+      - name: Publish API
+        run: dotnet publish $API_PROJECT -c Release -o publish-api
+      - name: Publish Worker
+        run: dotnet publish $WORKER_PROJECT -c Release -o publish-worker
+
+      - name: Upload API Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-package
+          path: publish-api
+
+      - name: Upload Worker Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: worker-package
+          path: publish-worker
+
+  deploy-api:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: api-package
+          path: publish-api
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1398DA640B1444ACA265D3D25941AB1F }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_725E39E05A3045A7BC96E86A0DC2C35E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4D40504E4EF747A58169E06A198F3F2B }}
+
+      - name: Deploy API
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.API_APP_NAME }}
+          slot-name: Production
+          package: publish-api
+
+  deploy-worker:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: worker-package
+          path: publish-worker
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1398DA640B1444ACA265D3D25941AB1F }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_725E39E05A3045A7BC96E86A0DC2C35E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4D40504E4EF747A58169E06A198F3F2B }}
+
+      - name: Deploy Worker
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.WORKER_APP_NAME }}
+          slot-name: Production
+          package: publish-worker

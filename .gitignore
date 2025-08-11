@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+pub/
+*.zip
+**/appsettings*.json
+clean/
+TowerApi/
+tower-monitor/

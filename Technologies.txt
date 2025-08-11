@@ -1,0 +1,28 @@
+Aqui está a lista objetiva e precisa das tecnologias e habilidades mais relevantes para a vaga descrita:
+
+✅ Tecnologias Relatadas
+Backend:
+C# / .NET - nao preciso agora.
+.NET Core - nao preciso agora.
+SQL Server
+Cosmos DB - Feito o basico.
+Azure Cloud Services
+Azure App Services
+Azure DevOps
+Angular (Framework)
+JavaScript / TypeScript
+HTML5
+CSS3
+PrimeNG (UI Component Library)
+
+✅ Habilidades Mais Relevantes
+Desenvolvimento Full Stack (6+ anos)
+Programação orientada a objetos (OOP)
+Desenvolvimento de APIs
+Arquitetura de aplicações web escaláveis
+Testes e garantia de qualidade (QA/UAT)
+Scrum / Agile (metodologias ágeis)
+Resolução de problemas e backlog management
+Comunicação clara (verbal e escrita)
+Atenção a detalhes e organização
+Colaboração em equipe multidisciplinar
